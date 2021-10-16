@@ -16,7 +16,5 @@ public class Rangu {
         else{
             System.out.println("Numri nuk eshte ne rangun e dhene!");
         }
-
-
     }
 }
