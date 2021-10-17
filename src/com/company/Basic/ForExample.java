@@ -14,5 +14,14 @@ public class ForExample {
             }
             System.out.println();
         }
+
+        System.out.println("------------------------------------------");
+
+        for (int i = numri; i > 0 ; i--) {
+            for (int j = i - 1; j < numri; j++) {
+                System.out.print("&");
+            }
+            System.out.println();
+        }
     }
 }
