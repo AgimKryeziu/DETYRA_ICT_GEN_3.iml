@@ -20,6 +20,22 @@ public class MethodsExample {
         System.out.println();
         shtypAlfabetin(false);
         System.out.println("Prodhimi i dy numrave: " + prodhimiIDyNumrave(a, b));
+
+        System.out.print("Sheno nje numer: ");
+        int numri = reader.nextInt();
+        printNumbers(numri);
+        System.out.println();
+        int[] array = {1, 2, 3, 4, 12, 87, 56, 2, 10, 36, 58, 46, 38, 25, 23, 87, 46, 22, 18};
+        printArray(array);
+        System.out.println("\nShuma e vargut: " + shumaEVargut(array));
+        System.out.println("Faktorieli i numrit " + numri + " eshte "  + factoriel(numri));
+        int[][] array2D = {
+                {1,2,54,65},
+                {34,56,78,3},
+                {5,78,52,36},
+                {34,5,67,98}
+        };
+        printArray2D(array2D);
     }
 
     public static void printOK() {
@@ -59,6 +75,46 @@ public class MethodsExample {
 
     public static double prodhimiIDyNumrave(double nr1, double nr2) {
         return nr1 * nr2;
+    }
+
+    public static void printNumbers(int n) {
+        System.out.print("Rangu i numrave: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i + ",");
+        }
+    }
+
+    public static void printArray(int[] array) {
+        System.out.print("Vargu: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ",");
+        }
+    }
+
+    public static double shumaEVargut(int[] vargu) {
+        double shuma = 0;
+        for (int i = 0; i < vargu.length; i++) {
+            shuma += vargu[i];
+        }
+        return shuma;
+    }
+
+    public static int factoriel(int n) {
+        int fakt = 1;
+        for (int i = 1; i <= n; i++) {
+            fakt *= i;
+        }
+        return fakt;
+    }
+
+    public static void printArray2D(int[][] array2D){
+        System.out.println("* Array 2 dimensionale *");
+        for (int i = 0; i < array2D.length; i++) {
+            for (int j = 0; j < array2D[0].length; j++) {
+                System.out.print(array2D[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
 
